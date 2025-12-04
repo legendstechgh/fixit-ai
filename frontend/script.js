@@ -7,7 +7,7 @@ const deviceSelect = document.getElementById("device");
 const connectionResult = document.getElementById("connectionResult");
 
 // Backend URL Configuration
-const BACKEND_URL = "http://127.0.0.1:8000";
+const BACKEND_URL = "https://fixit-backend-up86.onrender.com";
 
 // Event Listeners
 diagnoseBtn.addEventListener("click", () => startDiagnosis());
