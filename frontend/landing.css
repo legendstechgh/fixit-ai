@@ -1,0 +1,203 @@
+/* ========== GLOBAL RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0a0a14;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ========== FLOATING GHOSTS ========== */
+.ghost {
+    position: fixed;
+    font-size: 3rem;
+    opacity: 0.15;
+    animation: floatGhost 10s infinite ease-in-out;
+    z-index: 1;
+}
+
+.g1 { top: 10%; left: 5%; animation-delay: 0s; }
+.g2 { top: 40%; right: 10%; animation-delay: 2s; }
+.g3 { bottom: 10%; left: 20%; animation-delay: 4s; }
+
+@keyframes floatGhost {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ========== HERO ========== */
+.hero {
+    text-align: center;
+    padding: 120px 20px 100px;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-logo {
+    width: 140px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-top: 20px;
+    animation: slideDown 1.5s ease forwards;
+}
+
+.glow {
+    color: #a855f7;
+    text-shadow: 0 0 12px #a855f7, 0 0 40px #7c3aed;
+}
+
+.sub {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+.hero-text {
+    margin: 20px auto 40px;
+    max-width: 600px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeIn 2s ease;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 0 12px #7c3aed;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 22px #a855f7;
+}
+
+.scroll-indicator {
+    margin-top: 40px;
+    opacity: 0.5;
+    animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+/* ========== SECTIONS ========== */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+/* ========== FEATURE CARDS ========== */
+.features {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 18px #7c3aed88;
+}
+
+/* Fade in animation on scroll */
+.fade-in {
+    animation: fadeIn 1.3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== ARCHITECTURE ========== */
+.arch-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin: auto;
+    max-width: 800px;
+}
+
+.arch-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.arch-img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.arch-note {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.footer-sub {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+/* ========== KEY ANIMATIONS ========== */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
